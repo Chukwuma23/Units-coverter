@@ -1,0 +1,55 @@
+#Resolution{
+    background: #FFFFFF;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9;
+    top:0;
+    right: -360px;
+    transition: 0.5s;
+}
+
+#resolution-banner{
+    background: #F6A406;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#resolution-icon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 10px;
+    z-index: 9;
+}
+
+#wrapper-resolution{
+    position: relative;
+    top: 70px;
+}
+
+#res-to-from{
+    position: relative;
+    top: 70px;
+    left: 20px;
+}
+
+#resolutionInputValue{
+    position: relative;
+    top: 60px;
+}
+
+#resolution-result-value{
+    position: relative;
+    top: 84px;
+    left: 10px;
+    overflow: auto;
+}
+#resolution-result-label{
+    position: relative;
+    font-size: 990px;
+    background: #000000;
+}

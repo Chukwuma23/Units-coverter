@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="surface.css">
+<body>
+    
+<div class="container" id="Surface">
+  <img id="surface-icon" src="/images /icons8-back-arrow-50 (1).png" alt="" width="20" height="20" onclick="closeSurface()">
+  <div id="sur-banner">
+    <h1 class="text-center">Surface</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label id="surface-input-label"></label>
+      <input type="number" autofocus id="surfaceInputValue" oninput="convertSurface()" class="form-control">
+    </div>
+    <div class="col-6">
+      <label id="surface-result-label"></label>
+      <p id="surface-result-value" class="form-control" readonly placeholder="0" style="white-space: pre-line"></p>
+    </div>
+  </div>
+   <div id="sur-to-from">From:  <p>To:</p>
+  <div class="row">
+    <div class="col-6">
+      <div class="row" id="sur-from">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="N/m (Newton/Meter)" checked onchange="convertSurface()">
+          <label class="form-check-label">N/m (Newton/Meter)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="mN/m (Milli Newton/Meter)" onchange="convertSurface()">
+          <label class="form-check-label">mN/m (Milli Newton/Meter)</label>
+        </div>
+                <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="gf/cm (Gram Force/Centimeter)" checked onchange="convertSurface()">
+          <label class="form-check-label">gf/cm (Gram Force/Centimeter)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="dyn/cm (Dyne/Centimeter)" onchange="convertSurface()">
+          <label class="form-check-label">dyn/cm (Dyne/Centimeter)</label>
+        </div>
+                <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="erg/cm²" checked onchange="convertSurface()">
+          <label class="form-check-label">erg/cm²</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="erg/mm²" onchange="convertSurface()">
+          <label class="form-check-label">erg/mm²</label>
+        </div>
+                <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="pdl/in (Poundal/Inch)" checked onchange="convertSurface()">
+          <label class="form-check-label">pdl/in (Poundal/Inch)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceFromUnit" value="lbf/in (Pound Force/Inch)" onchange="convertSurface()">
+          <label class="form-check-label">Ibf/in (Pound Force/Inch)</label>
+        </div>
+        <!-- Add the rest of the "From" radio buttons here -->
+      </div>
+    </div>
+    <div class="col-6">
+    
+      <div class="row" id="sur-to">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="N/m (Newton/Meter)" checked onchange="convertSurface()">
+          <label class="form-check-label">N/m (Newton/Meter)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="mN/m (Milli Newton/Meter)" onchange="convertSurface()">
+          <label class="form-check-label">mN/m (Milli Newton/Meter</label>
+        </div>
+           <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="gf/cm (Gram Force/Centimeter)" checked onchange="convertSurface()">
+          <label class="form-check-label">gf/cm (Gram Force/Centimeter)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="dyn/cm (Dyne/Centimeter)" onchange="convertSurface()">
+          <label class="form-check-label">dyn/cm (Dyne/Centimeter)</label>
+        </div>
+                <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="erg/cm²" checked onchange="convertSurface()">
+          <label class="form-check-label">erg/cm²</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="erg/mm²" onchange="convertSurface()">
+          <label class="form-check-label">erg/mm²</label>
+        </div>
+           <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="pdl/in (Poundal/Inch)" checked onchange="convertSurface()">
+          <label class="form-check-label">pdl/in (poundal/Inch)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="surfaceToUnit" value="lbf/in (Pound Force/Inch)" onchange="convertSurface()">
+          <label class="form-check-label">Ibf/in (Pound Force/Inch)</label>
+        </div>
+        <!-- Add the rest of the "To" radio buttons here -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="surface-container"></div>
+<script src="surface.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+body {
+    font-size: 15pt;
+    background-color: #000000;
+}
+
+
+       nav ul{
+  background: #FFFFFF;
+  position: absolute;
+  width:250px;
+  height: 110vh;
+  position: fixed;
+  /*padding-top:50px ;*/
+  z-index: 7;
+  top:0px;
+  left:-440px;
+  transition: 0.5s;
+  text-align: left ;
+
+ 
+  box-shadow:  150px 0px 0px 0px rgba(31, 31, 31, 0.74);
+}
+
+nav ul li{
+position: relative;
+top:20px;
+left: 50px;
+list-style:none ;
+margin-top: 30px;
+}
+
+nav ul li a{
+  color:#000000;
+  text-decoration: none;
+  list-style: none;
+  font-size: 17px;
+  cursor: none;
+  transition: 0.2s;
+
+}
+
+nav button{
+    position: relative;
+    left: 10px;
+    background: #FFFFFF!important;
+    border: solid #FF9D03 5px!important;
+    color: #FFFFFF!important;
+    border-radius: 10px!important;
+}
+
+li img{
+    position: relative;
+    left:-30px ;
+    display: inline-block;
+}
+
+#sidemenu-icon{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+ul div{
+    background: #FF9D03;
+    width: 100%;
+    padding: 70px;
+}
+
+#icon{
+  background-color: #FFFFFF;
+  width:25px;
+  height :2.4px;
+  display: flex;
+  margin-top: 6px;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition:0.2s;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.sidemenu-icon{
+ 
+  width:30px;
+  height :35px;
+  position: relative;
+cursor: none;
+ }
+ 
+
+
+
+   #Jumbotron{
+    background: #FF9D03;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height:50px;
+    transition: 0.4s;
+    display: block;
+}
+
+
+
+ #menu{
+   position: relative;
+   left: 0;
+   transition: 0.4s;
+ }
+ 
+.menu-list{
+   display: grid;
+grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+   grid-gap: 20px;
+   margin-top:90px;
+   overflow-y: auto;
+   max-height: 600px;
+   height: 530px;
+   
+ }
+.accele-img{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 5px;
+  top: 20px;
+}
+#menu-h2{
+  font-size:12px ;
+  position: relative;
+  color:#6F6F6F;
+  top: 40px;
+  left: 10px;
+ display: flex;
+}
+
+.menu-list div{
+  background: #FF9D03;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  height: 70px;
+}
+ .menu-list div:hover{
+   background: #FFAC05;
+ }
+ 
+#red{
+    background: #DB012F;
+    box-shadow: 1px 1px 5px 2px #828282;
+}
+
+#blue{
+    background: #0119DB;
+        box-shadow: 1px 1px 5px 2px #828282;
+
+}
+
+#green{
+    background: #01DB0C;
+        box-shadow: 1px 1px 5px 2px #828282;
+
+}
+#dark-green{
+   background: #06F6BC;
+       box-shadow: 1px 1px 5px 2px #828282;
+
+}
+#purple{
+  background:#8506F6;
+      box-shadow: 1px 1px 5px 2px #828282;
+
+}

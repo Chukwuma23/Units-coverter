@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+           
+<div class="container" id="Force">
+  <img id="dis-icon" src="/images/icons8-back-arrow-50 (1).png" alt="" width="20" height="20" onclick="closeForce()">
+  <div id="dis-banner">
+    <h1 class="text-center">Distance</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label id="input-label"></label>
+      <input type="number" id="forceInputValue" placeholder="Enter value" oninput="convertForce()" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-6 offset-md-3">
+    <h5 id="h5">From: <p>To:</p></h5>
+    <div class="row" id="roww">
+      <div class="col-6">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="forceFromUnit" value="CM" checked onchange="convertForce()">
+          <label class="form-check-label">Centimeter (cm)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Inch" name="forceFromUnit" onchange="convertForce()">
+          <label class="form-check-label">Inch (in)</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <label id="result-label"></label>
+        <p id="force-result-value" class="form-control" readonly placeholder="0" style="white-space: pre-line"></p>
+      </div>
+    </div>
+    <div class="row" id="row">
+      <div class="col-md-6 offset-sm-3-md-3-lg-3">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="forceToUnit" value="CM" checked onchange="convertForce()">
+          <label class="form-check-label">Centimeter (cm)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Inch" name="forceToUnit" onchange="convertForce()">
+          <label class="form-check-label">Inch (in)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Feet" name="forceToUnit">
+          <label class="form-check-label">Feet (ft)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function convertForce() {
+    try {
+      let inputValue = parseFloat(document.getElementById("forceInputValue").value);
+      if (isNaN(inputValue)) {
+        document.getElementById("force-result-value").innerHTML = "Error!";
+        return;
+      }
+      let fromUnit = document.querySelector('input[name="forceFromUnit"]:checked').value;
+      let toUnit = document.querySelector('input[name="forceToUnit"]:checked').value;
+      document.querySelectorAll('input[name="forceFromUnit"], input[name="forceToUnit"]').forEach(function(radio) {
+        radio.addEventListener('change', convertForce);
+      });
+      var forceResult;
+      if (fromUnit === "CM" && toUnit === "Inch") {
+        forceResult = inputValue / 2.54;
+      } else if (fromUnit === "Inch" && toUnit === "CM") {
+        forceResult = inputValue * 2.54;
+      }
+      document.getElementById("force-result-value").innerHTML = forceResult.toFixed(2);
+    } catch (error) {
+      document.getElementById("force-result-value").innerHTML = "Error: Cannot perform operation";
+    }
+  }
+
+  function updateLabels() {
+    let fromUnit = document.querySelector('input[name="forceFromUnit"]:checked').value;
+    let toUnit = document.querySelector('input[name="forceToUnit"]:checked').value;
+    document.getElementById("input-label").innerHTML = `${fromUnit}`;
+    document.getElementById("result-label").innerHTML = `${toUnit}`;
+  }
+
+  // Call the function to update labels on page load
+  updateLabels();
+
+  // Add event listeners to update labels when units change
+  document.querySelectorAll('input[name="forceFromUnit"], input[name="forceToUnit"]').forEach(function(radio) {
+    radio.addEventListener('change', updateLabels);
+  });
+</script>
+
+</body>
+
+</html>

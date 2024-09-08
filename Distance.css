@@ -1,0 +1,153 @@
+        #distance-container { 
+            position: fixed;
+            top:-20px ;
+            margin: 20px auto; 
+            width: 100%;
+            height: 100%;
+            background-color: #f1f1f1; 
+            padding: 20px; 
+            border-radius: 5px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            transition: 0.5s;
+            right: -360px;
+           
+        } 
+  
+        .text-center { 
+            position: relative;
+            top: 15px;
+            left: -70px;
+            font-size: 18px;
+            color: #FFFFFF;
+        } 
+        
+        #dis-banner{
+            width: 100%;
+            height:50px;
+            background: #F6A406 ;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+  
+  
+        #inputValue{ 
+            position: relative;
+            top: 15px;
+            right: 15px;
+            width: 175px;
+            height: 48px;
+            padding: 10px; 
+            margin-bottom: 10px; 
+            box-sizing: border-box; 
+            border: solid #F6A406;
+            font-size: 15px;
+           
+        } 
+  
+
+        
+        
+        nav button{
+            position: relative;
+            left: 0px;
+            background: #C42D21;
+        }
+        
+        #result-value{ 
+            position: absolute;
+            top: 90px;
+            text-align: center; 
+            left:185px;
+            font-weight: bold; 
+            font-size: 15px; 
+            color: #747474;
+            width:170px;
+            border: solid #F6A406;
+            overflow-wrap: break-word;
+            overflow-y: auto;
+            height: 48px ;
+            max-height: 60px;
+            
+           
+        } 
+       
+        
+       .form-check{
+            font-size:15px;
+           display: grid;
+          gap:0px;
+          margin-top: 0px;
+        }
+        
+        #row{
+            position: relative;
+            top:0px;
+        }
+        #h5{
+            font-size: 15px;
+          position: relative;
+          top: 20px;
+            color: #5E5E5E;
+        }
+        input[type="radio"]{
+            border: solid #42445A;
+           font-size: 20px;
+          color:#D30000;
+           display: inline-flex;
+           transition: 0.4s;
+        }
+        input[type="radio"]:active{
+          transform: scale(0.3);
+        }
+        
+        input[type="radio"]:checked{
+            background: #FFFFFF ;
+            border: solid #FF9803DE 6px;
+            box-shadow:0 0 0 3px #FF980359;
+        }
+        label{
+            position: relative;
+            display: block;
+            top: -20px;
+            left: -5px;
+            font-weight: 400;
+        }
+        #dis-result-label{
+            position: absolute;
+            top:65px;
+            left: 200px;
+            font-weight: 500;
+            font-size: 17px;
+            z-index: 9;
+        }
+        #dis-input-label{
+            position: relative;
+            top: 15px;
+            font-weight: 500;
+        }
+        
+        #roww{
+            
+            overflow: auto;
+            height: 600px;
+            max-height: 490px;
+            top: 0px
+            
+        
+        }
+        h5 p{
+            position: relative;
+            left: 120px;
+            top: 0px;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+        #dis-icon{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            top: -10px;
+            z-index: 9;
+        }

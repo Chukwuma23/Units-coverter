@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+ 
+<link rel="stylesheet" href="force.css">
+<link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+            <link rel="stylesheet" href="/bootstrap-grid.css">
+
+<body>
+                
+<div class="container" id="Force">
+  <img id="force-icon" src="/images /icons8-back-arrow-50 (1).png" alt="" width="20" height="20" onclick="closeForce()">
+  <div id="force-banner">
+    <h1 class="text-center">Force</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label id="input-Label"></label>
+      <input type="number" autofocus id="forceInputValue" oninput="convertForce()" class="form-control" >
+    </div>
+          <div class="col-6">
+        <label id="result-Label"></label>
+        <p id="force-result-value" class="form-control" readonly placeholder="0"></p>
+      </div>
+  </div>
+
+
+  <div class="container">
+    <div class="col-md-6">
+      <h5>From:<span>To:</span></h5>
+      <div class="row" id="overflow">
+        <div class="col-6">
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="N (Newton)" checked onchange="convertForce()">
+  <label class="form-check-label">N (Newton)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="μN (Micro Newton)" onchange="convertForce()">
+  <label class="form-check-label">μN (Micro Newton)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="dyn (Dyne)" onchange="convertForce()">
+  <label class="form-check-label">dyn (Dyne)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="J/m (Joule/Meter)" onchange="convertForce()">
+  <label class="form-check-label">J/m (Joule/Meter)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="J/cm (Joule/Centimeter)" onchange="convertForce()">
+  <label class="form-check-label">J/cm (Joule/Centimeter)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="gf (Gram Force)" onchange="convertForce()">
+  <label class="form-check-label">gf (Gram Force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="tonf (US) (Ton Force)" onchange="convertForce()">
+  <label class="form-check-label">tonf(US) (Ton Force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="tonf (UK) (Ton Force)" onchange="convertForce()">
+  <label class="form-check-label">tonf(UK) (Ton Force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="tf (Metric Ton Force)" onchange="convertForce()">
+  <label class="form-check-label">tf  (Metric Ton force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="kipf (Kilo Pound Force)" onchange="convertForce()">
+  <label class="form-check-label">kipf (Kilo Pound Force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="ozf (Ounce Force)" onchange="convertForce()">
+  <label class="form-check-label">ozf (Ounce Force)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="pdl (Poundal)" onchange="convertForce()">
+  <label class="form-check-label">pdl(Poundal)</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="forceFromUnit" value="lbf (Pound Force)" onchange="convertForce()">
+  <label class="form-check-label">lbf(Pound Force)</label>
+</div>
+
+<!---TTOOOOOOOOOOTOOOOOOOOOOO---->
+
+<div class="col-md-6" id="TO">
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="N (Newton)" checked onchange="convertForce()">
+    <label class="form-check-label">N (Newton)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="μN (Micro Newton)" onchange="convertForce()">
+    <label class="form-check-label">μN (Micro Newton)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="dyn (Dyne)" onchange="convertForce()">
+    <label class="form-check-label">dyn (Dyne)</label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="J/m (Joule/Meter)" onchange="convertForce()">
+    <label class="form-check-label">J/m (Joule/Meter)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="J/cm (Joule/Centimeter)" onchange="convertForce()">
+    <label class="form-check-label">J/cm (Joule/Centimeter)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="gf (Gram Force)" onchange="convertForce()">
+    <label class="form-check-label">gf (Gram Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="tonf (US) (Ton Force)" onchange="convertForce()">
+    <label class="form-check-label">tonf (US) (Ton Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="tonf (UK) (Ton Force)" onchange="convertForce()">
+    <label class="form-check-label">tonf (UK) (Ton Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="tf (Metric Ton Force)" onchange="convertForce()">
+    <label class="form-check-label">tf (Metric Ton Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="kipf (Kilo Pound Force)" onchange="convertForce()">
+    <label class="form-check-label">kipf (Kilo Pound Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="ozf (Ounce Force)" onchange="convertForce()">
+    <label class="form-check-label">ozf (Ounce Force)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="pdl (Poundal)" onchange="convertForce()">
+    <label class="form-check-label">pdl (Poundal)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="forceToUnit" value="lbf (Pound Force)" onchange="convertForce()">
+    <label class="form-check-label">lbf (Pound Force)</label>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div id="force-container"></div>
+<script src="force.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

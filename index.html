@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>my converter app</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+        <link rel="stylesheet" href="/bootstrap-grid.css">
+                <link rel="stylesheet" href="Distance.css">
+                     <link rel="stylesheet" href="surface.css">        <link rel="stylesheet" href="Resolution.css">     <link rel="stylesheet" href="force.css"> 
+                
+</head>
+
+
+
+<body>
+    <div id="force-container"></div>
+<div id="surface-container"></div>
+<div id="Resolution-container"></div>
+    
+    
+    <div class="jumbotron" id="Jumbotron">
+        </div>
+  <nav >
+     <div class="icon-div" onclick="openSideMenu()" >
+   <span id="icon"></span>
+   <span id="icon"></span>
+   <span id="icon"></span>
+   </div>
+   
+ 
+  <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openSideMenu()">
+    <span class="navbar-toggler-icon"></span>
+  </button-->
+  
+    <ul id="sidemenu" class="navbar-nav mr-auto">
+        <div> </div>
+         <img id="sidemenu-icon" src="/images /icons8-back-arrow-50 (1).png" alt="back" width="30" height="35"
+         onclick="closeSideMenu()">
+         
+
+           <li class="nav-item active"><img src="/images /page.png" alt="" width="30" height="30"><a href="#" id="about-a">About</a></li>
+   
+     <li class="nav-item active"><img src="/images /back-arrow.png" alt="" width="30" height="30"><a href="#" id="timer-a">Shear app</a></li>
+     
+    <li><img src="/settings (1).png" alt="" width="30" height="30"><a  onclick="openSetting()"id ="settings-a">Settings</a></li>
+    
+
+    
+    <li><img src="/images /calculator.png" alt="" width="30" height="30"><a href="#"onclick="openCalculator()" id="calculator-a">calculator</a></li>
+    
+<li><img src="/images /chat.png" alt="" width="30" height="30"><a href="chukwumaisaac23@gmail.com" id="feedback-a" >Give feedback</a></li>
+
+    <li><img src="/images /eye.png" alt="" width="30" height="30"><a href="#" id="moreApp-a">View more apps</a></li>
+   
+
+ 
+   
+
+      </li>
+    </ul>
+  
+</nav>
+  
+
+
+  <div class="container">
+      <div class="xs-3-sm-4-md-6-col-6">
+     <div class="menu-list" id="menu">
+       <div onclick="openDistance()">
+         <img class="accele-img" src="/images /measure-distance.png" alt="">
+           <h2 id="menu-h2">Distance</h2>
+   </div>
+
+              <div id="red">
+         <img class="accele-img" src="/images /perseverance.png" alt="" onclick="openForce()">
+   <h2 id="menu-h2">Force</h2>
+     </div>
+     <div id="blue">
+         <img class="accele-img" src="/images /plication.png" alt="" onclick="openSurface()">
+   <h2 id="menu-h2">Surface</h2>
+     </div>
+     
+            <div id="purple">
+         <img class="accele-img" src="/images /hd-resolution.png" alt="" onclick="openResolution()" >
+   <h2 id="menu-h2">Resolution</h2>
+   </div>
+              <div id="green">
+         <img class="accele-img" src="/images /energetic.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">power</h2>
+     </div>
+     
+     <div id="dark-green">
+         <img class="accele-img" src="/images /fuel-station.png" alt="" onclick="openSeCalculator()">
+  <h2 id="menu-h2">fuel</h2>
+     </div>
+     
+     <div id="green">
+         <img class="accele-img" src="/images /volume.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">volume</h2>
+     </div>
+     
+  
+   
+     <div  onclick="openAcceleration()">
+         <img class="accele-img" src="/photos/retweet-.png" alt="">
+           <h2 id="menu-h2">currency</h2>
+   </div>
+
+              <div id="red">
+         <img class="accele-img" src="/photos/calculator.png" alt="" onclick="openCalculator()" onclick="openCalculatorr()">
+   <h2 id="menu-h2">Area</h2>
+     </div>
+     <div id="blue">
+         <img class="accele-img" src="/photos/time-tracking.png" alt="" onclick="openTimer()">
+   <h2 id="menu-h2">Weight</h2>
+     </div>
+     
+            <div id="purple">
+         <img class="accele-img" src="/photos/hourglass.png" alt="" onclick="openStopwatch()" >
+   <h2 id="menu-h2">Temperature</h2>
+   </div>
+              <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">pressure</h2>
+     </div>
+     
+     <div id="dark-green">
+         <img class="accele-img" src="/photos/scientific-calculator.png" alt="" onclick="openSeCalculator()">
+  <h2 id="menu-h2">Time</h2>
+     </div>
+     
+     <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">Storage</h2>
+     </div>
+     
+    
+          <div onclick="openAcceleration()">
+         <img class="accele-img" src="/photos/retweet-.png" alt="">
+           <h2 id="menu-h2">Speed</h2>
+   </div>
+
+              <div id="red">
+         <img class="accele-img" src="/photos/calculator.png" alt="" onclick="openCalculator()" onclick="openCalculatorr()">
+   <h2 id="menu-h2">Density</h2>
+     </div>
+     <div id="blue">
+         <img class="accele-img" src="/photos/time-tracking.png" alt="" onclick="openSurface()">
+   <h2 id="menu-h2">Surface</h2>
+     </div>
+     
+            <div id="purple">
+         <img class="accele-img" src="/photos/hourglass.png" alt="" onclick="openStopwatch()" >
+   <h2 id="menu-h2">Flow</h2>
+   </div>
+              <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">Angle</h2>
+     </div>
+     
+     <div id="dark-green">
+         <img class="accele-img" src="/photos/scientific-calculator.png" alt="" onclick="openSeCalculator()">
+  <h2 id="menu-h2">Torque</h2>
+     </div>
+     
+     <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">Viscosity</h2>
+     </div>
+     
+  
+   
+     <div  onclick="openAcceleration()">
+         <img class="accele-img" src="/photos/retweet-.png" alt="">
+           <h2 id="menu-h2">Concentratio</h2>
+   </div>
+
+              <div id="red">
+         <img class="accele-img" src="/photos/calculator.png" alt="" onclick="openCalculator()" onclick="openCalculatorr()">
+   <h2 id="menu-h2">Flow</h2>
+     </div>
+     <div id="blue">
+         <img class="accele-img" src="/photos/time-tracking.png" alt="" onclick="openTimer()">
+   <h2 id="menu-h2">Energy</h2>
+     </div>
+     
+            <div id="purple">
+         <img class="accele-img" src="/photos/hourglass.png" alt="" onclick="openStopwatch()" >
+   <h2 id="menu-h2">Current</h2>
+   </div>
+              <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">Charge</h2>
+     </div>
+     
+     <div id="dark-green">
+         <img class="accele-img" src="/photos/scientific-calculator.png" alt="" onclick="openSeCalculator()">
+  <h2 id="menu-h2">Light</h2>
+     </div>
+     
+     <div id="green">
+         <img class="accele-img" src="/photos/check-list.png" alt="" onclick="openToDoList()">
+   <h2 id="menu-h2">potential</h2>
+     </div>
+     
+   </div> 
+</div>
+</div>
+
+
+<!--DISTANCE-->
+
+  <div class="container" id="distance-container">
+      <img id="dis-icon" src="/images /icons8-back-arrow-50 (1).png" alt="" width="20" height="20" onclick="closeDistance()">
+      <div id="dis-banner">
+  <h1 class="text-center">Distance</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <label id="dis-input-label"></label>
+      <input type="number" id="inputValue" placeholder="Enter value" oninput="convert()" class="form-control">
+    </div>
+  </div>
+  
+    <div class="col-md-6 offset-md-3">
+       <h5 id="h5">From: <p>To:</p></h5>
+      <div class="row" id="roww">
+        <div class="col-6" >
+
+      <div class="form-check">
+            <input class="form-check-input" type="radio" name="fromUnit" value="CM" checked onchange="convert()">
+            <label class="form-check-label">Centimeter (cm)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Inch" name="fromUnit" onchange="convert()">
+            <label class="form-check-label">Inch (in)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Feet" name="fromUnit">
+            <label class="form-check-label">Feet (ft)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fromUnit" onchange="convert()" value="Meter">
+            <label class="form-check-label">Meter (m)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Yard" name="fromUnit">
+            <label class="form-check-label">Yard (yd)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Miles" name="fromUnit">
+            <label class="form-check-label">Miles (mi)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Kilometer" name="fromUnit">
+            <label class="form-check-label">Kilometer (km)</label>
+          </div>
+               <div class="form-check">
+            <input class="form-check-input" type="radio" name="fromUnit" value="Hectometer" checked onchange="convert()">
+            <label class="form-check-label">Hectometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Decimeter" name="fromUnit" onchange="convert()">
+            <label class="form-check-label">Decimeter</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Micrometer" name="fromUnit">
+            <label class="form-check-label">Micrometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Nanometer" name="fromUnit">
+            <label class="form-check-label">Nanometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Nautical" name="fromUnit">
+            <label class="form-check-label">Nautical</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Furlong" name="fromUnit">
+            <label class="form-check-label">Furlong</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Light year" name="fromUnit">
+            <label class="form-check-label">Light year</label>
+        </div>
+         <div class="form-check">
+            <input class="form-check-input" type="radio" value="Storey" name="fromUnit">
+            <label class="form-check-label">Storey</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Cubit" name="fromUnit">
+            <label class="form-check-label">Cubit</label>
+        </div>
+        </div>
+        
+        
+              <div class="col-6">
+                  <label id="dis-result-label"></label>
+    <div class="col-md-6 offset">
+        
+      <p   id="result-value" class="form-control" readnoly placeholder="0" style="white-space: pre-line">
+     
+    </p>
+    
+   
+      <div id="row" class="row">
+  <div class="col-md-6- offset-sm-3-md-3-lg-3">
+      
+          
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="toUnit" value="CM" checked onchange="convert()">
+            <label class="form-check-label">Centimeter (cm)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Inch" name="toUnit" onchange="convert()">
+            <label class="form-check-label">Inch (in)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Feet" name="toUnit">
+            <label class="form-check-label">Feet (ft)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Meter" name="toUnit">
+            <label class="form-check-label">Meter (m)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Yard" name="toUnit">
+            <label class="form-check-label">Yard (yd)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Miles" name="toUnit">
+            <label class="form-check-label">Miles (mi)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Kilometer" name="toUnit">
+            <label class="form-check-label">Kilometer (km)</label>
+          </div>
+          
+           <div class="form-check">
+            <input class="form-check-input" type="radio" name="toUnit" value="Hectometer" checked onchange="convert()">
+            <label class="form-check-label">Hectometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Decimeter" name="toUnit" onchange="convert()">
+            <label class="form-check-label">Decimeter</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Micrometer" name="toUnit">
+            <label class="form-check-label">Micrometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Nanometer" name="toUnit">
+            <label class="form-check-label">Nanometer</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Nautical" name="toUnit">
+            <label class="form-check-label">Nautical</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Furlong" name="toUnit">
+            <label class="form-check-label">Furlong</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Light year" name="toUnit">
+            <label class="form-check-label">Light year</label>
+        </div>
+         <div class="form-check">
+            <input class="form-check-input" type="radio" value="Storey" name="toUnit">
+            <label class="form-check-label">Storey</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Cubit" name="toUnit">
+            <label class="form-check-label">Cubit</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!---------FORCE--------------->
+
+  <!-- Project -->
+  <script src="main.js"></script>
+    <script src="/bootstrap.min.js"></script>
+      <script src="/Distance.js"></script>
+      <script src="force.js"></script>
+      <script src="surface.js"></script>
+            <script src="Resolution.js"></script>
+</body>
+</html>
